@@ -1,10 +1,17 @@
-export const HeroSection = () => {
+import { SearchButton } from "./SearchButton";
+
+export const HeroSection = ({ onSearch }: { onSearch: (query: string) => void }) => {
   return (
     <section 
       className="relative py-24 px-4 text-center text-white overflow-hidden"
       style={{ background: 'var(--hero-gradient)' }}
     >
       <div className="absolute inset-0 bg-black/10"></div>
+      
+      {/* Search Button positioned in top right */}
+      <div className="absolute top-8 right-8 z-20">
+        <SearchButton onSearch={onSearch} />
+      </div>
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-lg font-medium tracking-wide uppercase mb-2 opacity-90">

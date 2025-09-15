@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 interface CuisineCardProps {
   title: string;
   description: string;
   recipeCount: number;
   flag: string;
   image: string;
-  onClick?: () => void;
+  cuisine: string;
 }
 
 export const CuisineCard = ({
@@ -13,8 +15,23 @@ export const CuisineCard = ({
   recipeCount,
   flag,
   image,
-  onClick
+  cuisine
 }: CuisineCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // For now, navigate to a sample dish for each cuisine
+    const sampleDishes: Record<string, string> = {
+      'Italian': 'italian-carbonara',
+      'Indian': 'indian-butter-chicken', 
+      'Japanese': 'japanese-ramen'
+    };
+    
+    const dishId = sampleDishes[cuisine];
+    if (dishId) {
+      navigate(`/dish/${dishId}`);
+    }
+  };
   return (
     <div 
       className="group cursor-pointer bg-card rounded-lg overflow-hidden transition-all duration-300 hover:scale-105"
@@ -28,7 +45,7 @@ export const CuisineCard = ({
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = 'var(--card-shadow)';
       }}
-      onClick={onClick}
+      onClick={handleClick}
     >
       <div className="relative h-48 overflow-hidden">
         <img 
