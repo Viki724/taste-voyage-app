@@ -1,0 +1,104 @@
+Taste Voyage App — Documentation
+
+Overview
+
+Taste Voyage is a web application built with:
+
+Frontend stack: React + TypeScript
+
+Styling: Tailwind CSS + shadcn-ui
+
+Build tool / bundler: Vite
+
+Hosted / managed via: Lovable.dev platform 
+
+
+The app appears to be called Global Taste Book – Discover World Cuisines in its live preview. 
+
+
+---
+
+Project Structure
+
+Here’s a summary of the key files and folders:
+
+File / Folder	Contents / Purpose
+
+src/	Application source code (React components, pages, logic) 
+public/	Static assets served directly, e.g. index.html etc. 
+package.json	Project metadata, dependencies & scripts. 
+vite.config.ts	Vite configuration file (build, dev server, etc) 
+tsconfig.json / tsconfig.app.json / tsconfig.node.json	TypeScript compiler configuration for various contexts (app, node) 
+tailwind.config.ts	Tailwind CSS configuration. 
+eslint.config.js	ESLint config for linting JS/TS code. 
+.gitignore, bun.lockb	Standard files for ignoring files, dependency locking / bun (if used) etc. 
+
+
+
+---
+
+Getting Started / Setup
+
+These are the steps needed to run the project locally:
+
+1. Clone the repository:
+
+git clone https://github.com/Viki724/taste-voyage-app.git
+
+
+2. Navigate into the project folder:
+
+cd taste-voyage-app
+
+
+3. Install dependencies:
+
+npm install
+
+(You’ll need Node.js & npm installed; version not specified in docs but follow standard compatibilities. )
+
+
+4. Start development server with hot reloading / live preview:
+
+npm run dev
+
+
+
+
+---
+
+Technologies Used
+
+React — UI library. 
+
+TypeScript — typed JavaScript. 
+
+Vite — for dev server + build process. 
+
+Tailwind CSS — utility-first CSS framework. 
+
+shadcn-ui — UI components on top of Tailwind. 
+
+
+
+---
+
+Deployment
+
+The project is hosted / managed via Lovable.dev. 
+
+To deploy / publish: go to Lovable → Share → Publish. 
+
+Custom domains can be set via Lovable project settings (Domains) → Connect Domain. 
+
+
+
+---
+
+How to Contribute / Edit
+
+You can edit the project in several ways:
+
+Directly through Lovable UI: changes made there are committed to the GitHub repository. 
+
+Locally via your own IDE (after cloning). Then push changes to GitHub. Lovable will reflect the updates. 
